@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>"All-polis.ru" On-Line магазин финансовых решений для Вас и Вашего бизнеса</title>
+    <link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/aos.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg" color="#f01111">
+    <link rel="shortcut icon" href="assets/img/favicons/favicon.ico">
+    <meta name="msapplication-config" content="assets/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff"> 
+  </head>
+
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <div class="call-back-btn" id="btn-callback-phone-icon">
+        <div class="pulse1"></div>
+        <div class="pulse2"></div>
+        <div class="profilepicture"><img src="assets/img/phone.png" width="100%" height="100%"></div>
+    </div>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar-main">
+        <div class="container">
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img class="visible-xs logo-style" src="assets/img/logo1.png" width="210" height="49" alt="Автокомфорт">
+            </a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-left">
+                <li class="active"><a href="#glavnaya">Главная</a></li>
+                <li><a href="#aczii">Акции</a></li>
+                <li><a href="#zayavka">Заявка</span></a></li>
+                <li><a href="#kak-rabotaet">Как работает лизинг</a></li>
+                <li><a href="#voprosi">Частые вопросы</a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="success-modalModalLabel" id="success-modal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title text-center" id="success-modalLabel">Успешно отправлено</h4>
+            </div>
+            <div class="modal-footer">
+                <div class="text-center">
+                <button type="button" class="btn btn-default btn-order-call"  style="padding-left: 20px; padding-right: 20px;" id="success-modal-ok">OK</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" id="callback-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Наш специалист перезвонит вам в течение 15 минут</h4>
+            </div>
+            <div data-form-type="formoid">
+                <form class="form-inline" action="https://mobirise.com/" method="post" data-form-title="Заявка с ALL-POLIS.RU" onsubmit="$('#callback-modal').modal('hide');$('#success-modal').modal('show');">
+                    <div class="modal-body">
+                        <input type="hidden" data-form-email="true" value="TT1mk4YbDwFmnHHtn6CARkZHc6u0qQYUZCQ9dKKXazBd6hEEOKg57p29aA1v3nqCr3fg4D3gsAowzH/AiQo27CiWoVN78x7xKceBuQzi4lQ40jD1KyxG1CCqlnynA7kd">
+                            <div class="form-group" data-for="name">
+                                <label class="sr-only" for="inputName">Имя</label>
+                                <input type="text" class="form-control input-lg" name="name" data-form-field="Имя" id="inputName" placeholder="Имя" required>
+                            </div>
+                        
+                            <div class="form-group" data-for="phone">
+                                <label class="sr-only" for="inputNumber">Телефон</label>
+                                <input type="tel" class="form-control input-lg" name="phone" data-form-field="Телефон" id="inputNumber" placeholder="+7 (___) ___-__-__" required>
+                            </div>
+
+                            <div class="form-group" data-for="goal">
+                                <input type="text" class="form-control input-lg" style="display: none;" name="goal" data-form-field="Причина" id="inputSite" placeholder="" value="Клиент заказал обратный звонок">
+                            </div>
+                            <div class="form-group" data-for="time">
+                                <input type="text" class="form-control input-lg" style="display: none;" name="time" data-form-field="Время у клиента" id="inputTime" placeholder="" value="">
+                            </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-default btn-order-call">ЗАПИСАТЬСЯ</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden-xs" style="position: absolute; top: 22px; left: 70px;"><a href="http://all-polis.ru"><img class="logo-style" src="assets/img/logo1.png" height="60"></a></div>
+    <div class="hidden-xs" style="position: absolute; top: 32px; left: 310px; color:white;"><p class="fontLogo">On-Line магазин финансовых<br>решений для Вас и Вашего бизнеса</p></div>
+    <div class="hidden-xs" style="position: absolute; top: 32px; right: 70px; color:white;"><button type="button" class="btn btn-default btn-lg btn-order-call" id="btn-callback-carousel">Заказать звонок</button></div>
+    
+    <section class="section-start-image-doc" id="glavnaya">  
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-7 col-xs-12 custom-main-scr">
+                    <p class="fontStart hidden-xs" data-aos="fade-up">Автомобили, спецтехника и оборудование<br>в лизинг с минимальным удорожанием</p>
+                    <p class="fontStart visible-xs" data-aos="fade-up">Автомобили, спецтехника<br>и оборудование<br>в лизинг с минимальным удорожанием</p>
+                </div>
+                <div class="col-md-4 hidden-xs"></div>
+            </div>
+            <span class="hidden-xs"><br><br><br><br></span>
+            <span class="visible-xs"><br></span>
+            <div class="row">
+                <div class="col-md-12 col-xs-12 custom-main-scr">
+                    <p class="fontStart1" data-aos="fade-up">Получите расчёт по лизингу бесплатно</p>
+                </div>
+            </div>
+            <div class="row custom-main-scr">
+                <div data-form-type="formoid">
+                    <form action="https://mobirise.com/" method="post" data-form-title="Заявка с ALL-POLIS.RU" onsubmit="$('#success-modal').modal('show');">
+                        <input type="hidden" data-form-email="true" value="TT1mk4YbDwFmnHHtn6CARkZHc6u0qQYUZCQ9dKKXazBd6hEEOKg57p29aA1v3nqCr3fg4D3gsAowzH/AiQo27CiWoVN78x7xKceBuQzi4lQ40jD1KyxG1CCqlnynA7kd">
+                        <div class="col-md-2 col-xs-6" style="padding-left: 0;">
+                            <div class="form-group form-group-lg" data-for="name">
+                                <input type="text" class="form-control" name="name" style="padding-top:25px; padding-bottom: 25px;" data-form-field="Имя" placeholder="Имя" aria-describedby="name-callback-1" required>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-xs-6 custom-request-form">
+                            <div class="form-group form-group-lg" data-for="phone">
+                                <input type="tel" class="form-control" style="padding-top:25px; padding-bottom: 25px;" name="phone" data-form-field="Телефон" placeholder="+7 (___) ___ - __ - __" aria-describedby="phone-callback-1" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group" data-for="goal">
+                            <input type="text" class="form-control input-lg" style="display: none;" name="goal" data-form-field="Причина" id="inputSite2" placeholder="" value="Клиент запросил расчет по лизингу">
+                        </div>
+                        <div class="form-group" data-for="time">
+                            <input type="text" class="form-control input-lg" style="display: none;" name="time" data-form-field="Время у клиента" id="inputTime2" placeholder="" value="">
+                        </div>
+
+                        <div class="col-md-4 hidden-xs custom-request-form">
+                            <button type="submit" class="btn btn-default btn-order-call btn-lg" style="padding-top:13px; padding-bottom: 13px;">ЗАПИСАТЬСЯ</button>
+                        </div>
+
+                        <div class="col-md-4 col-xs-12 visible-xs custom-request-form text-center">
+                            <button type="submit" class="btn btn-default btn-order-call btn-lg" style="padding-top:13px; padding-bottom: 13px;">ЗАПИСАТЬСЯ</button>
+                        </div>
+                    </form>
+                </div> 
+                <div class="col-md-2 hidden-xs"></div>  
+            </div>
+
+            <div class="row custom-main-scr">
+                <div class="col-md-12 col-xs-12" style="padding-left: 0;">
+                    <p class="fontStart2" data-aos="fade-up">Наш специалист перезвонит вам в течение 15 минут</p>
+                </div>
+            </div>
+
+            <div class="mbr-arrow mbr-arrow-floating hidden-xs" style="bottom: 10px;" aria-hidden="true">
+                <a href="#aczii" class="btn-border-dark"><i class="mbr-arrow-icon"></i></a>
+            </div>            
+        </div>
+    </section>
+
+    <section class="section-gray" id="aczii" style="padding-top: 60px;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 col-xs-12">
+                        <div class="text-center">
+                            <h1 data-aos="fade-up">Акции</h1>
+                            <p style="font-size: 20px;" data-aos="fade-up">Мы предоставляем вам выгодные условия на легковой,<br>грузовой траснпорт и технику.</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12" data-aos="fade-up">
+                        <div class="text-left">
+                            <img src="assets/img/lising-light.jpg" class="img-thumbnail">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12" data-aos="fade-up">
+                        <div class="text-right">
+                            <img src="assets/img/lising-new.jpg" class="img-thumbnail">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="section-gray" id="zayavka" style="padding-top: 45px;"></section>
+    <section class="section-secondary slogan" data-aos="fade-up">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="fix-padding" data-form-type="formoid">
+                        <h1 class="fontCarousel">Оставьте заявку прямо сейчас</h1>
+                        <form class="form-inline vcenter" action="https://mobirise.com/" method="post" data-form-title="Заявка с ALL-POLIS.RU" onsubmit="$('#success-modal').modal('show');">
+                          <input type="hidden" data-form-email="true" value="TT1mk4YbDwFmnHHtn6CARkZHc6u0qQYUZCQ9dKKXazBd6hEEOKg57p29aA1v3nqCr3fg4D3gsAowzH/AiQo27CiWoVN78x7xKceBuQzi4lQ40jD1KyxG1CCqlnynA7kd">
+
+                          <div class="form-group"  data-for="name" style="margin-right:15px;">
+                                <label class="sr-only" for="name">Имя</label>
+                                <input type="text" class="form-control input-lg" name="name" id="name" data-form-field="Имя" placeholder="Имя" required>
+                          </div>
+                          <div class="form-group" data-for="phone" style="margin-right:15px;">
+                                <label class="sr-only" for="phone">Телефон</label>
+                                <input type="tel" class="form-control input-lg" name="phone" data-form-field="Телефон" id="phone" placeholder="+7 (___) ___ - __ - __" required>
+                          </div>
+
+                          <div class="form-group" data-for="goal">
+                                <input type="text" class="form-control input-lg" style="display: none;" name="goal" data-form-field="Причина" id="inputSite3" placeholder="" value="Клиент подал заявку на лизинг">
+                          </div>
+                          <div class="form-group" data-for="time">
+                                <input type="text" class="form-control input-lg" style="display: none;" name="time" data-form-field="Время у клиента" id="inputTime3" placeholder="" value="">
+                          </div>
+                          
+                          <input type="submit" class="btn btn-default btn-order-call btn-lg" value="ОСТАВИТЬ ЗАЯВКУ"/>
+                        </form>
+                        <br><br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <section style="background-color: rgb(255, 255, 255); padding-top: 70px; padding-bottom: 30px;" data-aos="fade-up">
+            <div class="container">
+                <div class="row">
+                        <div class="col-xs-12 visible-xs">
+                            <div class="text-center"><img class="img-rounded" src="assets/img/truck.png" height="200"></div>
+                        </div>
+                      <div class="col-md-5 col-xs-12 text-right hidden-xs">
+                          <h3>ТЯГАЧ</h3>
+                          <div class="lead">
+                            <p>Расчетная цена седельного<br>тягача 5 900 000 руб.<br> 
+                                Ежемесячный платёж – 76 100 руб.<br>  
+                                Срок лизинга 5 лет<br>  
+                                Удорожание в год – 5,29%  
+                                <br><br>
+                                *Данные приведены из расчета авансового платежа 49% от стоимости предмета лизинга.
+                            </p>
+                          </div>
+                          <br>
+                          <div class="text-right"><a role="button" class="btn btn-default btn-order-call btn-lg" id="btn-callback-carousel2-1">УЗНАТЬ ПОДРОБНЕЕ</a></div>
+                      </div>
+
+                      <div class="col-md-5 col-xs-12 text-center visible-xs">
+                            <h3>ТЯГАЧ</h3>
+                            <div class="lead">
+                              <p>Расчетная цена седельного<br>тягача 5 900 000 руб.<br> 
+                                  Ежемесячный платёж – 76 100 руб.<br>  
+                                  Срок лизинга 5 лет<br>  
+                                  Удорожание в год – 5,29%  
+                                  <br><br>
+                                  *Данные приведены из расчета авансового платежа 49% от стоимости предмета лизинга.
+                              </p>
+                            </div>
+                            <br>
+                            <div class="text-center"><a role="button" class="btn btn-default btn-order-call btn-lg" id="btn-callback-carousel2">УЗНАТЬ ПОДРОБНЕЕ</a></div>
+                      </div>
+
+                      <div class="col-md-7 hidden-xs">
+                          <div><img class="img-rounded" src="assets/img/truck.png" height="400"></div>
+                      </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="background-color: rgb(255, 255, 255); padding-top: 70px; padding-bottom: 30px;" data-aos="fade-up">
+                <div class="container">
+                    <div class="row">
+                          <div class="col-md-7 visible-xs">
+                                <div class="text-center"><img class="img-rounded" src="assets/img/pogruz.png" height="200"></div>
+                          </div>
+                          
+                          <div class="col-md-5 text-right hidden-xs">
+                              <h3>ПОГРУЗЧИК</h3>
+                              <div class="lead">
+                                  <p>Расчетная цена погрузчика 1 810 000 руб.<br>   
+                                    Максимальный срок лизинга 4 года<br><br>   
+                                    Удорожание в год – 0% с учетом скидки 10% по субсидии Министерства промышленности и торговли РФ.</p>
+                              </div>
+                              <br>
+                              <div class="text-right"><a role="button" class="btn btn-default btn-order-call btn-lg" id="btn-callback-carousel3-1">УЗНАТЬ ПОДРОБНЕЕ</a></div>
+                          </div>
+
+                          <div class="col-md-5 col-xs-12 text-center visible-xs">
+                                <h3>ПОГРУЗЧИК</h3>
+                                <div class="lead">
+                                    <p>Расчетная цена погрузчика 1 810 000 руб.<br>   
+                                      Максимальный срок лизинга 4 года<br><br>   
+                                      Удорожание в год – 0% с учетом скидки 10% по субсидии Министерства промышленности и торговли РФ.</p>
+                                </div>
+                                <br>
+                                <div class="text-center"><a role="button" class="btn btn-default btn-order-call btn-lg" id="btn-callback-carousel3">УЗНАТЬ ПОДРОБНЕЕ</a></div>
+                          </div>
+
+                          <div class="col-md-7 hidden-xs">
+                              <div class=""><img class="img-rounded" src="assets/img/pogruz.png" height="400"></div>
+                          </div>
+                    </div>
+                </div>
+        </section>
+
+        <section style="background-color: rgb(255, 255, 255); padding-top: 70px; padding-bottom: 30px;" data-aos="fade-up">
+                <div class="container">
+                    <div class="row">
+                          <div class="col-md-7 col-xs-12 visible-xs">
+                                <div class="text-center"><img class="img-rounded" src="assets/img/stanok.jpg" height="200"></div>
+                          </div>
+
+                          <div class="col-md-5 col-xs-12 visible-xs text-center">
+                                <h3>Оборудование</h3>
+                                <div class="lead">
+                                    <p>Расчетная цена оборудования 5 000 000 руб.<br>
+                                        Ежемесячный платёж – 93 985 руб.<br> 
+                                        Срок лизинга 3 года<br> 
+                                        Удорожание в год – 5,66%
+                                        <br><br>
+                                        *Данные приведены из расчета авансового платежа 49% от стоимости предмета лизинга.</p>
+                                </div>
+                                <br>
+                                <div class="text-center"><a role="button" class="btn btn-default btn-order-call btn-lg" id="btn-callback-carousel4-1">УЗНАТЬ ПОДРОБНЕЕ</a></div>
+                          </div>
+                          <div class="col-md-5 text-right hidden-xs">
+                              <h3>Оборудование</h3>
+                              <div class="lead">
+                                  <p>Расчетная цена оборудования 5 000 000 руб.<br>
+                                    Ежемесячный платёж – 93 985 руб.<br> 
+                                    Срок лизинга 3 года<br> 
+                                    Удорожание в год – 5,66%
+                                    <br><br>
+                                    *Данные приведены из расчета авансового платежа 49% от стоимости предмета лизинга.</p>
+                              </div>
+                              <br>
+                              <div class="text-right"><a role="button" class="btn btn-default btn-order-call btn-lg" id="btn-callback-carousel4">УЗНАТЬ ПОДРОБНЕЕ</a></div>
+                          </div>
+                          <div class="col-md-7 hidden-xs">
+                              <div class=""><img class="img-rounded" src="assets/img/stanok.jpg" height="400"></div>
+                          </div>
+                    </div>
+                </div>
+        </section>
+
+        <section id="kak-rabotaet" style="background-color: white;padding-top: 45px;"></section>
+        <section class="section-how-work-lising">
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col-md-6 col-xs-12">
+                      <div class="text-center hidden-xs" data-aos="fade-up">
+                          <a class="link" href="" style="color:white;"><h1 class="font-lising">Как работает<br>лизинг<br>автомобилей?</h1></a>
+                      </div>
+                      <div class="text-center visible-xs" data-aos="fade-up">
+                            <a class="link" href="" style="color:white;"><h1 class="font-lising">Как работает лизинг автомобилей?</h1></a>
+                      </div>
+                      <img class="hidden-xs" src="assets/img/car-transparent.png" height="200" style="padding-left: 80px;" data-aos="flip-right">
+                      <span class="visible-xs"><br></span>
+                  </div>
+                  <div class="col-md-6 col-xs-12">
+                      <div class="text-left" style="color:white;" data-aos="flip-left">
+                          <h3 class="lising-txt">✔ Вы оставляете заявку</h3><br>
+                          <h3 class="lising-txt">✔ Наш менеджер готовит для Вас предложение</h3><br>
+                          <h3 class="lising-txt">✔ Вы заключаете договор</h3><br>
+                          <h3 class="lising-txt">✔ Лизинговая компания выкупает автомобиль</h3><br>
+                          <h3 class="lising-txt">✔ Вы пользуетесь автомобилем</h3><br>
+                          <h3 class="lising-txt">✔ Вы вносите выкупной платёж</h3><br>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <section class="section-questions" id="voprosi" style="padding-top: 50px;" data-aos="fade-up">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                  <h1 class="text-center">Частые вопросы о лизинге</h1><br>
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                          <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                  <b>Какие основные отличия лизинга от кредита?</b>
+                              </a>
+                            </h4>
+                          </div>
+                          <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                В отличие от кредита лизинг имеет следующие преимущества:<br><br>
+    
+                                — Более низкий первоначальный взнос<br><br>
+                                
+                                — Не требуется дополнительный залог<br><br>
+                                
+                                — Вы экономите 18% за счёт возврата НДС<br><br>
+                                
+                                — Лизинговые платежи относятся к расходам и уменьшают налог на прибыль в вашей компании<br>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="panel panel-default">
+                          <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                  <b>Можно ли взять в лизинг авто с пробегом?</b>
+                              </a>
+                            </h4>
+                          </div>
+                          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                Да, мы финансируем как новые автомобили, так и автомобили с пробегом.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="panel panel-default">
+                          <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                 <b>Можно ли досрочно выкупить предмет лизинга?</b>
+                              </a>
+                            </h4>
+                          </div>
+                          <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                Да, возможен выкуп через 12 месяцев лизинга.
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="heading5">
+                              <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                    <b>Какие требования к возрасту компании?</b>
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+                              <div class="panel-body">
+                                  Срок регистрации вашего бизнеса должен быть:<br><br>
+    
+                                  — от 12 месяцев при приобретении легковых автомобилей и коммерческого транспорта<br><br>
+    
+                                  — от 12 месяцев при приобретении специальной и самоходной техники<br><br>
+    
+                                  — от 12 месяцев при приобретении других типов транспортных средств<br>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-2"></div>
+              </div>
+            </div>
+          </section>
+
+          <footer>
+                <div>
+                    <div class="footer-call">
+                    <div class="text-center">
+                        <p>On-Line магазин финансовых решений<br>для Вас и Вашего бизнеса</p>
+                    </div>
+                    </div>
+                </div>
+                <p style="margin-bottom:0;padding-bottom:0;color: #FAFAFA;">&copy; 2018 <a href="http://all-polis.ru" style="color: #FAFAFA;">all-polis.ru</a></p>
+                <div class="line-bottom width-sm"></div>
+                <br><br>
+          </footer>
+              
+            <div style="background:#333333;">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12">
+                            <p class="developer">Разработка сайтов <a href="http://kedrovski.com">kedrovski.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/formoid.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+  </body>
+</html>
